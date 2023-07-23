@@ -1,41 +1,28 @@
-import "./BookList.css";
-
-const BookList = () => {   // List of All Books
+import "./BookList.css"; //BookList CSS
+const BookList = () => {
+  // BookList Main Component
   return (
     <section className="bookList">
-      <Books />
-      <Books />
-      <Books />
+      <Book />
+      <Book />
+      <Book />
     </section>
   );
 };
 
-const Books = () => { //  Books Component
+const Book = () => {
+  //Books Component
+  const image =
+    "https://m.media-amazon.com/images/I/41KY-NORo9L._SY291_BO1,204,203,200_QL40_FMwebp_.jpg"; // Book Cover Image
+  const title = "The 48 Laws of Power"; // Book Title
+  const author = "Robert Greene"; // Book Author
   return (
     <article className="book">
-      <Image />
-      <Title />
-      <Author />
+      <img src={image} alt={title} />
+      <h1>{title}</h1>
+      <h3>{author}</h3
     </article>
   );
 };
 
-const Image = () => { // Image of the Book
-  return (
-    <img
-      src="https://m.media-amazon.com/images/I/51eHhm0XRmL._SX337_BO1,204,203,200_.jpg"
-      alt="Twenty Years Later"
-    />
-  );
-};
-
-const Title = () => { // Title of the Book
-  return <h1>Twenty Years Later</h1>;
-};
- 
-const Author = () => { // Author of the Book
-  return <h3>Charlie Don</h3>;
-};
-
-
-export default BookList
+export default BookList;

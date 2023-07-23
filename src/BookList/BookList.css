@@ -7,15 +7,15 @@
 body {
   width: 100%;
   height: 100%;
-  background: skyblue;
 }
 
 .bookList {
   width: 90vw;
   max-width: 1170px;
-  margin: 5rem auto;
   display: grid;
   gap: 2rem;
+  margin: 5rem auto;
+  text-align: center;
 }
 
 @media screen and (min-width: 768px) {
@@ -23,12 +23,13 @@ body {
     grid-template-columns: repeat(3, 1fr);
   }
 }
+
 .book {
   background: #fff;
-  padding: 2rem;
+  border-radius: 1rem;
+  padding: 2rem ;
   text-align: center;
 }
-
 .book img {
   width: 100%;
   object-fit: cover;
@@ -38,4 +39,3 @@ body {
   margin-top: 1rem;
   font-size: 2rem;
 }
-
